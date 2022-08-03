@@ -328,6 +328,7 @@ const StyledCard = styled(Card)`
 `
 
 const MainContainer = styled.div`
+  
 `;
 
 const MainContent = styled.div`

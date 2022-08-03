@@ -9,7 +9,7 @@ const List = ({ state }) => {
   return (
     <MainContainer>
       <HeaderIntro>
-      <BlackOverlay></BlackOverlay>
+      {/* <BlackOverlay></BlackOverlay> */}
       </HeaderIntro>
       <Container>
         <MainContent>

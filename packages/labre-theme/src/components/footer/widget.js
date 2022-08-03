@@ -11,8 +11,8 @@ const Widget = ({ state }) => {
        {/* <hr className="divider div1" /> */}
         <div className="footer-grid">
           <div className="footer-widget">
-           <h2 className="widget-title">Labre Theme</h2>
-           <p>A demo Frontity theme project prepared as part of the CSS-Tricks article. </p>
+           <h2 className="widget-title">Website Desa Bumi Etam</h2>
+           <p>Website Informasi Desa Bumi Etam,<br/>Kecamata Kaubun, Kabupaten Kutai Timur</p>
           </div>
           <div className="footer-widget">
             <h2 className="widget-title">Sitemap</h2>

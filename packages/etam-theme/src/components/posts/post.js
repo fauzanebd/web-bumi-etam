@@ -48,50 +48,62 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
-      <div>
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+    <Main>
+      <Container>
+        <div>
+          <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
-        {/* Hide author and date on pages */}
-        {!data.isPage && (
-          <div>
-            {author && (
-              <StyledLink link={author.link}>
-                <Author>
-                  By <b>{author.name}</b>
-                </Author>
-              </StyledLink>
-            )}
-            <DateWrapper>
-              {" "}
-              on <b>{date.toDateString()}</b>
-            </DateWrapper>
-          </div>
+          {/* Hide author and date on pages */}
+          {!data.isPage && (
+            <div>
+              {author && (
+                <StyledLink link={author.link}>
+                  <Author>
+                    By <b>{author.name}</b>
+                  </Author>
+                </StyledLink>
+              )}
+              <DateWrapper>
+                {" "}
+                on <b>{date.toDateString()}</b>
+              </DateWrapper>
+            </div>
+          )}
+        </div>
+
+        {/* Look at the settings to see if we should include the featured image */}
+        {state.theme.featured.showOnPost && (
+          <FeaturedMedia id={post.featured_media} />
         )}
-      </div>
 
-      {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
-
-      {data.isAttachment ? (
-        // If the post is an attachment, just render the description property,
-        // which already contains the thumbnail.
-        <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
-      ) : (
-        // Render the content using the Html2React component so the HTML is
-        // processed by the processors we included in the
-        // libraries.html2react.processors array.
-        <Content>
-          <Html2React html={post.content.rendered} />
-        </Content>
-      )}
-    </Container>
+        {data.isAttachment ? (
+          // If the post is an attachment, just render the description property,
+          // which already contains the thumbnail.
+          <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
+        ) : (
+          // Render the content using the Html2React component so the HTML is
+          // processed by the processors we included in the
+          // libraries.html2react.processors array.
+          <Content>
+            <Html2React html={post.content.rendered} />
+          </Content>
+        )}
+      </Container>
+    </Main>
   ) : null;
 };
 
 export default connect(Post);
+
+const Main = styled.div`
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    180deg,
+    rgba(66, 174, 228, 0.1),
+    rgba(66, 174, 228, 0)
+  );
+`
 
 const Container = styled.div`
   width: 800px;

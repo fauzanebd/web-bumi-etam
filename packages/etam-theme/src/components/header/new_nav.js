@@ -19,7 +19,8 @@ const Navigation = ({ state }) => {
     <Navbar bg="white" expand="lg" sticky="top" variant="light" className="navbar-toggleable-md mediumnavigation">
       <Container>
         <Navbar.Brand href="/">
-          {state.frontity.title}
+          <img src="https://cdn.discordapp.com/attachments/692746506079567962/1003396569174913045/Asset_1.png" />
+          {/* {state.frontity.title} */}
         </Navbar.Brand>
         <Navbar.Toggle className="navbar-toggler-right" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

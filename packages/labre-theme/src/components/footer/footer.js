@@ -6,13 +6,13 @@ import Widget from "./widget"
 const Footer = () => {
   return (
   <>
-    < Widget />
+    {/* < Widget /> */}
     <footer>
       <SiteInfo>
-        Frontity LABRE Theme 2021 | {" "} Proudly Powered by {"  "}  
-        <FooterLinks href="https://frontity.org/" target="_blank" rel="noopener"> Frontity</FooterLinks>
+        Website Desa Bumi Etam 2022 | Presented by KKN-PPM UGM Kutai Bersorai 2022
+        {/* <FooterLinks href="https://frontity.org/" target="_blank" rel="noopener"> Frontity</FooterLinks>
         {"  "} and {"  "}  
-        <FooterLinks href="https://wordpress.org/" target="_blank" rel="noopener">WordPress</FooterLinks>       
+        <FooterLinks href="https://wordpress.org/" target="_blank" rel="noopener">WordPress</FooterLinks>        */}
       </SiteInfo>
     </footer>
     </>
