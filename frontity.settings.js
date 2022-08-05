@@ -102,7 +102,6 @@ const settings = {
               endpoint: "flora-mangrove",
               archive: "/flora-mangrove",
             }
-          
           ],
           "homepage": "/beranda",
           "postsPage": "/archives"
