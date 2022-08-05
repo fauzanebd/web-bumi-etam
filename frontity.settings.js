@@ -3,7 +3,7 @@ const settings = {
   "state": {
     "frontity": {
       // "url": "https://test.frontity.org",
-      "url": "https://webbumietam.000webhostapp.com/",
+      "url": "https://blog.bumietam.web.id/",
       "title": "Desa Bumi Etam",
       "description": "Website Informasi Desa Bumi Etam"
     }
@@ -83,7 +83,7 @@ const settings = {
         "source": {
           // "url": "https://test.frontity.org/",
           // "url": "https://webbumietam.000webhostapp.com/",
-          "url": "http://www.bumietam.web.id/",
+          "url": "https://www.blog.bumietam.web.id/",
           // "url": "https://jsnation2020.frontity.org/wp-json"
           // "redirections": "404",
           "postTypes": [
@@ -96,6 +96,11 @@ const settings = {
               type: "pariwisata",
               endpoint: "pariwisata",
               archive: "/pariwisata",
+            },
+            {
+              type: "flora-mangrove",
+              endpoint: "flora-mangrove",
+              archive: "/flora-mangrove",
             }
           
           ],

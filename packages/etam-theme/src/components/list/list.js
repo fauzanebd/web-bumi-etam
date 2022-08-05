@@ -1,4 +1,4 @@
-import { connect, styled, decode } from "frontity";
+import { connect, styled, decode, css } from "frontity";
 import Item from "./list-item";
 import Pagination from "./pagination";
 import Container from "react-bootstrap/Container";
@@ -10,6 +10,17 @@ const List = ({ state }) => {
     <MainContainer>
       <HeaderIntro>
       {/* <BlackOverlay></BlackOverlay> */}
+        {/* <div className="wrapintro">
+          <h1>Daftar Postingan</h1>
+          <h2 className="lead">"Affiliates" is a free Bootstrap Template designed & developed by WowThemesNet, best suitable for affiliate marketers.</h2>
+        </div> */}
+        <div className="jumbotron jumbotron-fluid">
+          <Container>
+
+            <h1 css={css`color: #fff`}>Daftar Postingan</h1>
+            {/* <p class="lead" css={css`color: #fff`}> </p> */}
+          </Container>
+        </div>
       </HeaderIntro>
       <Container>
         <MainContent>
@@ -55,11 +66,20 @@ export default connect(List);
 //   padding: 24px;
 //   list-style: none;
 // `;
+const TitleBox = styled.div`
+  position: relative;
+
+`
+
+const HeaderTitle = styled.h1`
+  position: absolute;
+  
+`
 
 const HeaderIntro = styled.section`
-  background-image:url(https://cdn.discordapp.com/attachments/692746506079567962/1003376896932855859/IMG_3538_conv.jpeg);
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8) ), url(https://cdn.discordapp.com/attachments/692746506079567962/1003376896932855859/IMG_3538_conv.jpeg);
   background-size: cover;
-  padding: 9rem 0;
+  padding: 8rem 0;
   margin-top:-20px;
   margin-bottom:2rem;
   z-index: 2;
