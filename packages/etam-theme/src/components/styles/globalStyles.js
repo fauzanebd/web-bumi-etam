@@ -1186,7 +1186,6 @@ const elementBase = (colors) => css`
         .beforefooter {text-align:center;}
         .beforefooter .footersocial { text-align: center !important;    margin-top: 1rem; }    
         .form-group .col-md-6:first-child {margin-bottom: 1rem;}
-        
     }
 `
 
@@ -1195,7 +1194,7 @@ const elementBase = (colors) => css`
 const globalStyles = (colors) =>
   css([
     cssReset,
-    // settings,
+    settings,
     documentSetup(colors),
     accessibilitySettings,
     elementBase(colors),
