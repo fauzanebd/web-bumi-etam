@@ -70,7 +70,7 @@ const HomePage = ({ state, actions, libraries }) => {
     // find recent posts data
     const recent = parsed.find(node => node.type === "div" && node.props.className === "recent_content");
     const recent_data = recent.props.children;
-    console.log(recent_data);
+    // console.log(recent_data);
   
     
     // call function to create carousel
